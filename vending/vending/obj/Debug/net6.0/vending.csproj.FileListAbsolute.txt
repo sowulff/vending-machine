@@ -1,0 +1,15 @@
+/Users/sowulff/Documents/GitHub/vending-machine/vending/vending/bin/Debug/net6.0/vending
+/Users/sowulff/Documents/GitHub/vending-machine/vending/vending/bin/Debug/net6.0/vending.deps.json
+/Users/sowulff/Documents/GitHub/vending-machine/vending/vending/bin/Debug/net6.0/vending.runtimeconfig.json
+/Users/sowulff/Documents/GitHub/vending-machine/vending/vending/bin/Debug/net6.0/vending.dll
+/Users/sowulff/Documents/GitHub/vending-machine/vending/vending/bin/Debug/net6.0/ref/vending.dll
+/Users/sowulff/Documents/GitHub/vending-machine/vending/vending/bin/Debug/net6.0/vending.pdb
+/Users/sowulff/Documents/GitHub/vending-machine/vending/vending/obj/Debug/net6.0/vending.csproj.AssemblyReference.cache
+/Users/sowulff/Documents/GitHub/vending-machine/vending/vending/obj/Debug/net6.0/vending.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sowulff/Documents/GitHub/vending-machine/vending/vending/obj/Debug/net6.0/vending.AssemblyInfoInputs.cache
+/Users/sowulff/Documents/GitHub/vending-machine/vending/vending/obj/Debug/net6.0/vending.AssemblyInfo.cs
+/Users/sowulff/Documents/GitHub/vending-machine/vending/vending/obj/Debug/net6.0/vending.csproj.CoreCompileInputs.cache
+/Users/sowulff/Documents/GitHub/vending-machine/vending/vending/obj/Debug/net6.0/vending.dll
+/Users/sowulff/Documents/GitHub/vending-machine/vending/vending/obj/Debug/net6.0/ref/vending.dll
+/Users/sowulff/Documents/GitHub/vending-machine/vending/vending/obj/Debug/net6.0/vending.pdb
+/Users/sowulff/Documents/GitHub/vending-machine/vending/vending/obj/Debug/net6.0/vending.genruntimeconfig.cache
