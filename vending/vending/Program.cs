@@ -16,7 +16,7 @@ new Item("DORRITOS", 25),
 };
 
 var options = "";
-var total = 0;
+var total = 50;
 
 Console.WriteLine("Welcome to Fantastic Vending Machine!!");
 
@@ -24,7 +24,7 @@ while (options == "")
 {
     Console.WriteLine();
     Console.WriteLine("What would you like to do?");
-    Console.Write("Type SEE, BUY NOW or LEAVE: ");
+    Console.Write("Type SEE, BUY NOW, VIEW CREDIT or LEAVE: ");
 
     options = Console.ReadLine();
 
@@ -38,7 +38,7 @@ while (options == "")
 
         Console.WriteLine();
         Console.Write("Type BUY NOW or LEAVE: ");
-        options = Console.ReadLine(); ;
+        options = Console.ReadLine(); 
 
         if (options == "LEAVE")
         {
@@ -57,24 +57,91 @@ while (options == "")
             Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - -");
             Console.WriteLine(" :) TYPE THE NAME OF THE ITEM YOU WOULD LIKE :) ");
             Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - -");
-            Console.ReadLine();
-            Console.ReadLine();
+
+            options = Console.ReadLine();
+
+
+            foreach (Item item in vendingMachine.Items)
+            {
+
+                if (options == item.Name)
+                {
+                    if (total < item.Price)
+                    {
+                        Console.WriteLine("Stop being poor try again");
+                        options = "";
+                    }
+                    else
+                    {
+                        total = total - item.Price;
+                        Console.WriteLine(item.Name + " costs " + item.Price + " You have now " + total + " left ");
+                        System.Threading.Thread.Sleep(2000);
+                        options = "";
+                    }
+                }
+            }
         }
+        else
+        {
+            Console.WriteLine("I'm sorry, that's not a valid item.");
+            options = "";
+        }
+
     }
     else if (options == "BUY NOW")
     {
-        total = 40;
+
+        Console.WriteLine();
+        Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - -");
+        Console.WriteLine(" :) TYPE THE NAME OF THE ITEM YOU WOULD LIKE :) ");
+        Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - -");
+
+        options = Console.ReadLine();
+
+        foreach (Item item in vendingMachine.Items)
+        {
+           
+            if(options == item.Name)
+            {
+                if (total < item.Price)
+                {
+                    Console.WriteLine("Stop being poor try again");
+                    options = "";
+                }
+                else
+                {
+                    total = total - item.Price;
+                    Console.WriteLine(item.Name + " costs " + item.Price + " You have now " + total + " left ");
+                    System.Threading.Thread.Sleep(2000);
+                    options = "";
+                } 
+            }
+        }
+
     }
     else if (options == "LEAVE")
     {
-        total = 60;
+        Console.WriteLine();
+        Console.WriteLine("- - - - - - - - - - -");
+        Console.WriteLine(" 🙂 WELCOME BACK 🙂 ");
+        Console.WriteLine("- - - - - - - - - - -");
+        System.Threading.Thread.Sleep(2000);
+        options = "";
+    }
+    else if (options == "VIEW CREDIT")
+    {
+        Console.WriteLine();
+        Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - -");
+        Console.WriteLine($"Total: {total} SEK");
+        Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - -");
+        System.Threading.Thread.Sleep(2000);
+        options = "";
+
     }
     else
     {
-        Console.WriteLine("I'm sorry, that's not a valid ticket.");
+        Console.WriteLine("I'm sorry, that's not a valid item.");
         options = "";
     }
 }
 
-//Console.WriteLine();
-//Console.WriteLine($"You have selected {options}, your total is ${total}:-");
